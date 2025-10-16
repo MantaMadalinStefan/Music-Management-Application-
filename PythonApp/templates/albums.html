@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manager Muzical - Albume</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Albume</h1>
+    <form method="POST">
+        <input type="text" name="title" placeholder="Titlu Album" required>
+        <input type="text" name="year" placeholder="An Lansare" required>
+        <button type="submit">Adaugă Album</button>
+    </form>
+    <ul>
+        {% for album in albums %}
+        <li>
+            {{ album[1] }} ({{ album[2] }})
+            <div>
+                <a href="/modify_album/{{ album[0] }}" class="modify">Modifică</a>
+                <a href="/delete_album/{{ album[0] }}" class="delete">Șterge</a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/" class="back-button">Înapoi</a>
+</body>
+</html>

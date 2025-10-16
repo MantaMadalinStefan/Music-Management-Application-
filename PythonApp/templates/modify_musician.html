@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manager Muzical - Modificare Muzician</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Modifică Muzician</h1>
+    <form method="POST">
+        <input type="text" name="name" value="{{ musician[1] }}" required>
+        <input type="text" name="genre" value="{{ musician[2] }}" required>
+        <button type="submit">Salvează Modificările</button>
+    </form>
+    <a href="/musicians" class="back-button">Anulează</a>
+</body>
+</html>

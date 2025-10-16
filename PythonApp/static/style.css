@@ -1,0 +1,224 @@
+/* Resetare stiluri implicite */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fundal și aliniere generală */
+body {
+    background-color: #f8fafc;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Container general */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stil pentru titluri */
+h1 {
+    color: #222;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* 🔹 STILIZARE LOGO + TITLU */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: 200px; /* Dimensiunea logo-ului */
+    height: auto;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin: 0;
+}
+
+/* Titlu sub logo */
+.sub-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 🔹 NAVIGARE CU BUTOANE */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Butoane */
+.nav-buttons a {
+    padding: 12px 24px;
+    background-color: #007BFF;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+/* Efect hover */
+.nav-buttons a:hover {
+    background-color: white;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+}
+
+/* 🔹 FORMULARE ȘI INPUT-URI */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* 🔹 INPUT-URI AJUSTATE */
+form input {
+    width: 100%;
+    max-width: 300px;
+    height: 45px;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Select ajustat */
+form select {
+    width: 100%;
+    max-width: 300px;
+    height: 45px;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    text-align: center;
+    background-color: white;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    /* Adaugă săgeata personalizată */
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"%3E%3Cpath fill="%23333" d="M7 10l5 5 5-5z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+/* Buton formular */
+form button {
+    padding: 12px 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Listă */
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: auto;
+}
+
+ul li {
+    background-color: #fff;
+    margin: 9px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Butoane */
+ul li div {
+    display: flex;
+    gap: 8px;
+}
+
+.modify {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.modify:hover {
+    background-color: #218838;
+}
+
+.delete {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.delete:hover {
+    background-color: #c82333;
+}
+
+/* Buton Înapoi */
+.back-button {
+    display: inline-block;
+    margin: 18px auto;
+    padding: 14px 20px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 9px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}

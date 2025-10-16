@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manager Muzical - Muzicieni</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Muzicieni</h1>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Nume Muzician" required>
+        <input type="text" name="genre" placeholder="Gen Muzical" required>
+        <button type="submit">Adaugă Muzician</button>
+    </form>
+    <ul>
+        {% for musician in musicians %}
+        <li>
+            {{ musician[1] }} ({{ musician[2] }})
+            <div>
+                <a href="/modify_musician/{{ musician[0] }}" class="modify">Modifică</a>
+                <a href="/delete_musician/{{ musician[0] }}" class="delete">Șterge</a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/" class="back-button">Înapoi</a>
+</body>
+</html>

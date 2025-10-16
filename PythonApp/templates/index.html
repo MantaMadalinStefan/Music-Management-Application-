@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manager Muzical</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Logo + Titlu -->
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="ETTI Logo">
+        </div>
+
+        <!-- Subtitlu -->
+        <div class="sub-title">
+            Gestionare aplicatie muzicala
+        </div>
+
+        <!-- Butoane de navigare -->
+        <div class="nav-buttons">
+            <a href="/musicians">Muzicieni</a>
+            <a href="/albums">Albume</a>
+            <a href="/relationships">Relații</a>
+        </div>
+    </div>
+
+</body>
+</html>

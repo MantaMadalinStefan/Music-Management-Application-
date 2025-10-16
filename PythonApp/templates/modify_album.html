@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manager Muzical - Modificare Album</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Modifică Album</h1>
+    <form method="POST">
+        <input type="text" name="title" value="{{ album[1] }}" required>
+        <input type="text" name="year" value="{{ album[2] }}" required>
+        <button type="submit">Salvează Modificările</button>
+    </form>
+    <a href="/albums" class="back-button">Anulează</a>
+</body>
+</html>

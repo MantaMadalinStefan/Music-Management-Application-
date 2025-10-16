@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manager Muzical - Relații</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Gestionare Relații</h1>
+    <form method="POST">
+        <h3>Selectează Muzician</h3>
+        <select name="musician_id">
+            {% for musician in musicians %}
+            <option value="{{ musician[0] }}">{{ musician[1] }}</option>
+            {% endfor %}
+        </select>
+        <h3>Selectează Album</h3>
+        <select name="album_id">
+            {% for album in albums %}
+            <option value="{{ album[0] }}">{{ album[1] }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Creează Relație</button>
+    </form>
+    <h2>Relații Existente</h2>
+    <ul>
+        {% for relationship in relationships %}
+        <li>{{ relationship[2] }} - {{ relationship[3] }}
+            <a href="/delete_relationship/{{ relationship[0] }}/{{ relationship[1] }}" class="delete">Șterge</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/" class="back-button">Înapoi</a>
+</body>
+</html>
